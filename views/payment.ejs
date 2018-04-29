@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <% include partials/head.ejs %>
+  </head>
+  <body>
+<% include partials/header.ejs %>
+
+<div id="hero-image" class="light-color">
+  <h1 id="hero-title"><%= title %></h1>
+</div>
+<div class="light-color text-center payment-div">
+  <h2>Email:</h2>
+  <form action="/payment" method="post">
+    <input type="text" name="email" placeholder="Enter your E-mail...">
+    <input type="submit" name="confirm" value="Confirm Booking">
+  </form>
+
+</div>
+
+    <% include partials/footer.ejs %>
+
+    <% include partials/scripts.ejs %>
+
+  </body>
+</html>

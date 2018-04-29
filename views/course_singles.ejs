@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <% include partials/head.ejs %>
+  </head>
+  <title></title>
+  <body>
+<% include partials/header.ejs %>
+
+<div id="hero-image-single" style="background-image:url('/images/<%= course.hero_image %>')" class="light-color">
+  <h1 id="hero-title"><%= title %></h1>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+  <div class="description-wrapper">
+    		<div class="description">
+    			<h2 class="course-header">Description</h2>
+    			<p><%= course.description %></p>
+    		</div>
+
+        <div class="instructors">
+      			<h2 class="course-header">Instructors</h2>
+      			<ul>
+      			<% for (var i = 0; i < instructors.length; i++) { %>
+      				<li><%= instructors[i] %></li>
+      			<% } %>
+      			</ul>
+      		</div>
+        <div>
+        <div class="instructors">
+          <h2 class="course-header">Course Length</h2>
+            <h3><%= course.course_week%></h3>
+        </div>
+
+        </div>
+        <div class="pay-money">
+          <a href="/courses/<%= course.course_number %>">
+            <!-- Change to course number -->
+            <h3> Book This Course <%= course.price %></h3>
+          </a>
+      </div>
+  </div>
+</div>
+      <!-- End of left portion -->
+      <div class="col-sm-4">
+        <div class="content-padding clearfix">
+          <div class="poster-wrapper">
+            <img src="/images/<%= course.poster %>" class="img-responsive">
+          </div>
+        </div>
+      </div>
+      <!-- end of right portion -->
+    </div>
+</div>
+
+    <% include partials/footer.ejs %>
+
+    <% include partials/scripts.ejs %>
+
+  </body>
+</html>

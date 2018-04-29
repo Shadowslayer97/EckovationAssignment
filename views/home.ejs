@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <% include partials/head.ejs %>
+  </head>
+  <body>
+  <% include partials/header.ejs %>
+<div id="hero-image" class="light-color">
+  <h1 id="hero-title"><%= title %></h1>
+</div>
+  <div class="container div-margin">
+
+
+    <div class="text-center">
+    <p><b>India's fastest growing social learning platform!</b></p>
+<p><b>Eckovation</b> is currently India's fastest growing social learning platform and most trusted destination for quality adaptive learning. With 1000+ educators already on board, we have 5000+ learning groups and 700000+ learners. Because of our innovative approach of using technology to deliver quality education at scale,
+   we have been featured by almost all big media houses including Indian Express, NDTV, Aajtak, Business Standard, Economic Times, YourStory, etc. </p>
+  </div>
+
+</div>
+
+    <div class="container-fluid text-center">
+  <h1><b>Why Eckovation?? </b></h1>
+  <div class="row light-color">
+
+    <div class="col-sm-4 text-center">.
+    <b>Enhance</b>
+    <p>Eckovation is changing Education! We believe in the concept of collaborative education which builds experience and enhances the quality of learning with the interplay of
+      all the stakeholders in a simple efficient manner. The platform has already brought positive change in the way education is delivered</p>
+    </div>
+
+    <div class="col-sm-4 text-center">
+<b>Communicate</b>
+<p>Using our tool, educators and students from all over the country can interact with fellow members seamlessly, learning and growing together in an online social
+learning environment. Education can and has become a revolutionizing change agent in communities across the country due to Eckovation
+</p></div>
+
+<div class="col-sm-4 text-center"><b>Innovate</b><p>
+We believe that assimilation of technology into society can solve a lot of fundamental problems in an efficient manner. Using the smartphone platform we
+constantly strive to bring innovative products and provide better service to the society and achieve the cause of knowledge sharing</p>
+</div>
+
+
+
+ </div>
+</div>
+
+
+<div id="posters-wrapper" class="content-padding clearfix">
+  <% for(var i=0;i < courses.length;i++){  %>
+     <div class="poster">
+       <a href="/Eckovation/<%= courses[i].course_number %>">
+   <img src="/images/<%=courses[i].poster%>" class="img-responsive">
+   <div class="poster-info-overlay">
+     <h3><%= courses[i].title%></h3>
+     <h4>View More <i class="fa fa-arrow-right"></i></h4>
+   </div>
+   </a>
+ </div>
+  <% } %>
+    </div>
+
+    <div class="container-fluid bg-4 text-center" id="contact">
+
+
+            <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+       <h2>Contact Us</h2>
+       <hr style="width:200px" class="w3-opacity">
+
+       <div class="w3-section">
+         <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Delhi,INDIA</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: srirangsathyan17@gmail.com</p>
+       </div><br>
+       <p>Send us a message:</p>
+
+       <form action="/action_page.php" target="_blank">
+         <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+         <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+         <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+         <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+         <p>
+           <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+             <i class="fa fa-paper-plane"></i> SEND MESSAGE
+           </button>
+         </p>
+       </form>
+     </div>
+
+       <!-- Footer -->
+     <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+       <a href="/" target="blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+       <a href="/" target="blank"<i class="fa fa-instagram w3-hover-opacity"></i></a>
+
+      <a href="https://github.com/Shadowslayer97" target="blank"> <i class="fa fa-github w3-hover-opacity"></i></a>
+       <a href="/" target="blank"<i class="fa fa-twitter w3-hover-opacity"></i></a>
+
+      <!-- End footer -->
+     </footer>
+
+
+
+
+    <% include partials/footer.ejs %>
+    <% include partials/scripts.ejs %>
+
+  </body>
+</html>

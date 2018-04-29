@@ -1,0 +1,18 @@
+<nav class="navbar navbar-fixed-top">
+	<div class="content-padding">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="/">ECKOVATION</a></li>
+			<li><a href="/">Home</a></li>
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses<i class="fa fa-chevron-down"></i></a>
+				<ul class="dropdown-menu">
+					<% for (var i = 1; i <= courses.length; i++) { %>
+					<li>
+						<a href="/Eckovation/<%= i%>" class="course_link"><%= courses[i - 1].title %></a>
+					</li>
+					<% } %>
+        </ul> <!-- dropdown-menu -->
+			</li> <!-- dropdown -->
+		</ul> <!-- navbar-nav -->
+	</div>
+</nav>
